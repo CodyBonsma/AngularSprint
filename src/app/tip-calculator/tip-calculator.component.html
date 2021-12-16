@@ -1,0 +1,33 @@
+
+
+<div class="tip-container">
+    <h1>Calculate your bill</h1>
+    <hr/>
+    <input id="bill-input" placeholder="bill amount" [(ngModel)]="billAmount" type="number"/>
+    <br/>
+    <select id="tip-select" [(ngModel)]="selectedOption">
+        <option value="" disabled selected hidden>Select a tip</option>
+        <option *ngFor="let percent of percentages" placeholder="Select a Tip">
+            {{percent}} %
+        </option>
+    </select>
+    <br/>
+    <button id="btn" (click)="calculate()">Calculate</button>
+    <button id="btn" (click)="clear()">Clear</button>
+    <br/>
+</div>
+
+<table *ngIf="billComplete" class="billComplete-container">
+    <tr>
+        <th>Bill:</th>
+        <th>{{billAmount | currency: 'USD'}}</th>
+    </tr>
+    <tr>
+        <th>Tip:</th>
+        <th>{{showTipAmount | currency: 'USD'}}</th>
+    </tr>
+    <tr>
+        <th>Total Amount:</th>
+        <th>{{showBill | currency: 'USD'}}</th>
+    </tr>
+</table>

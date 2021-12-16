@@ -1,0 +1,52 @@
+
+
+.tip-container{
+    font-family: monospace;
+    background-color: moccasin;
+    box-shadow: 60px -16px teal;
+    border: solid;
+    // border-radius: 25px;
+    width: 500px;
+    padding: 10px;
+    // max-width: fit-content;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+}
+
+#tip-select{
+    width: 178px;
+}
+
+.billComplete-container{
+    font-family: monospace;
+    background-color: moccasin;
+    box-shadow: -20px 30px teal;
+    margin-top: 10px;
+    border: solid;
+    // border-radius: 25px;
+    width: 500px;
+    // max-width: fit-content;
+    justify-content: space-around;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 55%;
+    transform: translateX(-50%);
+}
+
+table, tr, th {
+    border: 1px solid black;
+}
+
+#btn, #tip-select, #bill-input {
+    font-family: monospace;
+    margin: 6px;
+}
+
+input, select{
+    text-align: center;
+}
